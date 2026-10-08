@@ -30,6 +30,10 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', service: 'Pesum Kanakku API', timestamp: new Date() });
 });
 
-app.listen(PORT, () => {
-  console.log(`Pesum Kanakku Server listening on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Pesum Kanakku Server listening on port ${PORT}`);
+  });
+}
+
+export default app;
