@@ -1,0 +1,16 @@
+{
+  "name": "pesum-kanakku",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "npm install --prefix server && npm install --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm test --prefix server",
+    "start:server": "npm run start --prefix server",
+    "start:client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run start --prefix server\" \"npm run dev --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

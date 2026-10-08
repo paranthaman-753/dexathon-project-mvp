@@ -1,0 +1,59 @@
+flowchart TD
+    subgraph UserInterface["User Interface (Frontend)"]
+        A((Shopkeeper))
+        B[React Web App]
+        C{{Browser Speech API}}
+    end
+
+    subgraph BackendServices["Backend (Express API)"]
+        D[API Router]
+        E[Transaction Controller]
+        F[Gemini Parser Service]
+    end
+
+    subgraph ExternalServices["External Services"]
+        G((Gemini AI Model))
+    end
+
+    subgraph Database["Database (MongoDB)"]
+        H[(Customers Collection)]
+        I[(Transactions Ledger)]
+    end
+
+    %% User interactions
+    A -- "Speaks/Types Transaction" --> B
+    A -- "Selects/Adds Customer" --> B
+    
+    %% Speech Recognition Flow
+    B -. "Audio Input" .-> C
+    C -. "Transcribed Text" .-> B
+
+    %% Frontend to Backend Flow
+    B -- "POST /api/parse\n(Text to process)" --> D
+    B -- "CRUD Operations\n(Save/View Ledger)" --> D
+
+    %% Backend internal flow
+    D --> E
+    D --> F
+
+    %% AI Parsing
+    F -- "Unstructured Text" --> G
+    G -- "Structured JSON" --> F
+    F --> E
+
+    %% Database Operations
+    E -- "Save Credit/Payment" --> I
+    E -- "Update/Read Balances" --> H
+
+    %% Styling to make it clean
+    classDef user fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef frontend fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+    classDef backend fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+    classDef db fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
+    classDef ext fill:#ffebee,stroke:#d32f2f,stroke-width:2px;
+
+    class A user;
+    class B,C frontend;
+    class D,E,F backend;
+    class H,I db;
+    class G ext;

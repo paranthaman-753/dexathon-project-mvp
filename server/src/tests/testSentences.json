@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "input": "முருகன் கிட்ட ரெண்டு கிலோ அரிசி 120 ரூபாய்க்கு கடனா கொடுத்தேன்.",
+    "expected": { "intent": "credit", "customer": "Murugan", "item": "rice", "quantity": 2, "unit": "kg", "amount": 120 }
+  },
+  {
+    "id": 2,
+    "input": "Murugan 200 ரூபாய் கொடுத்துட்டாரு",
+    "expected": { "intent": "payment", "customer": "Murugan", "item": null, "quantity": null, "unit": null, "amount": 200 }
+  },
+  {
+    "id": 3,
+    "input": "Ravi kadan 500 rupees oil 1 liter",
+    "expected": { "intent": "credit", "customer": "Ravi", "item": "oil", "quantity": 1, "unit": "L", "amount": 500 }
+  },
+  {
+    "id": 4,
+    "input": "செல்வி 100 ரூபாய் பணம் கொடுத்தார்",
+    "expected": { "intent": "payment", "customer": "Selvi", "item": null, "quantity": null, "unit": null, "amount": 100 }
+  },
+  {
+    "id": 5,
+    "input": "Kumar bought 5 kg sugar for 220 credit",
+    "expected": { "intent": "credit", "customer": "Kumar", "item": "sugar", "quantity": 5, "unit": "kg", "amount": 220 }
+  },
+  {
+    "id": 6,
+    "input": "மீனா 300 ரூபாய் கடனா சோப்பு வாங்கினார்",
+    "expected": { "intent": "credit", "customer": "Meena", "item": "soap", "quantity": null, "unit": null, "amount": 300 }
+  },
+  {
+    "id": 7,
+    "input": "Ravi paid 150 rupees",
+    "expected": { "intent": "payment", "customer": "Ravi", "item": null, "quantity": null, "unit": null, "amount": 150 }
+  },
+  {
+    "id": 8,
+    "input": "முருகன் அஞ்சு கிலோ பருப்பு கடனா கேட்டாரு",
+    "expected": { "intent": "credit", "customer": "Murugan", "item": "dal", "quantity": 5, "unit": "kg", "amount": null }
+  },
+  {
+    "id": 9,
+    "input": "Murugan 50 rupees thandharu",
+    "expected": { "intent": "payment", "customer": "Murugan", "item": null, "quantity": null, "unit": null, "amount": 50 }
+  },
+  {
+    "id": 10,
+    "input": "ரெண்டு பாக்கெட் பால் 60 ரூபாய் முருகன் கடன்",
+    "expected": { "intent": "credit", "customer": "Murugan", "item": "milk", "quantity": 2, "unit": "packet", "amount": 60 }
+  },
+  {
+    "id": 11,
+    "input": "Kumar paid 500 rupees cash",
+    "expected": { "intent": "payment", "customer": "Kumar", "item": null, "quantity": null, "unit": null, "amount": 500 }
+  },
+  {
+    "id": 12,
+    "input": "Selvi 1 kg tea powder 450 credit",
+    "expected": { "intent": "credit", "customer": "Selvi", "item": "tea powder", "quantity": 1, "unit": "kg", "amount": 450 }
+  },
+  {
+    "id": 13,
+    "input": "கண்ணன் 200 ரூபாய் கடனா பொருளு வாங்கினாரு",
+    "expected": { "intent": "credit", "customer": "Kannan", "item": null, "quantity": null, "unit": null, "amount": 200 }
+  },
+  {
+    "id": 14,
+    "input": "Ravi கொடுத்துட்டாரு 1000 ரூபா",
+    "expected": { "intent": "payment", "customer": "Ravi", "item": null, "quantity": null, "unit": null, "amount": 1000 }
+  },
+  {
+    "id": 15,
+    "input": "Unknown text without clear data",
+    "expected": { "intent": "unknown", "customer": null, "item": null, "quantity": null, "unit": null, "amount": null }
+  },
+  {
+    "id": 16,
+    "input": "Meena 2L oil 340 rupees kadan",
+    "expected": { "intent": "credit", "customer": "Meena", "item": "oil", "quantity": 2, "unit": "L", "amount": 340 }
+  },
+  {
+    "id": 17,
+    "input": "Murugan bought 3 kg rice for 180 rupees",
+    "expected": { "intent": "credit", "customer": "Murugan", "item": "rice", "quantity": 3, "unit": "kg", "amount": 180 }
+  },
+  {
+    "id": 18,
+    "input": "முருகன் 2 லிட்டர் எண்ணெய் 240 கடன்",
+    "expected": { "intent": "credit", "customer": "Murugan", "item": "oil", "quantity": 2, "unit": "L", "amount": 240 }
+  },
+  {
+    "id": 19,
+    "input": "Selvi paid 75 rupees today",
+    "expected": { "intent": "payment", "customer": "Selvi", "item": null, "quantity": null, "unit": null, "amount": 75 }
+  },
+  {
+    "id": 20,
+    "input": "Kumar 8 kg rice 600 rupees credit",
+    "expected": { "intent": "credit", "customer": "Kumar", "item": "rice", "quantity": 8, "unit": "kg", "amount": 600 }
+  },
+  {
+    "id": 21,
+    "input": "நூறு ரூபாய் கடன்",
+    "expected": { "intent": "credit", "customer": null, "item": null, "quantity": null, "unit": null, "amount": 100 }
+  },
+  {
+    "id": 22,
+    "input": "Ravi 2 kg rice 180 credit",
+    "expected": { "intent": "credit", "customer": "Ravi", "item": "rice", "quantity": 2, "unit": "kg", "amount": 180 }
+  }
+]
