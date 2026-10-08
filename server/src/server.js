@@ -17,10 +17,21 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-connectDB();
+// Connect to DB immediately for local dev
+connectDB().catch(console.error);
 
 app.use(cors());
 app.use(express.json());
+
+// Middleware to ensure DB connection is ready before any route executes
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    res.status(500).json({ error: 'Database connection failed' });
+  }
+});
 
 app.use('/api/parse', parseRoutes);
 app.use('/api/customers', customerRoutes);
